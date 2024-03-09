@@ -1,1 +1,4 @@
-console.log('base-component.ts');
+console.log('OK');
+
+const baseComponent = 'base-component.tsが実行されました';
+export default baseComponent;
