@@ -1,1 +1,1 @@
-console.log('src/background/background.ts');
+console.log('src/background/background.tsが実行されました！！');

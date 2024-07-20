@@ -1,1 +1,1 @@
-console.log('src/index.ts');
+console.log('src/index.tsが実行されました！！');
