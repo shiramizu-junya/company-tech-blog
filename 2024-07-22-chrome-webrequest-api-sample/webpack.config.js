@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const CopyPlugin = require("copy-webpack-plugin");
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
 	entry: {
@@ -19,6 +20,9 @@ module.exports = {
 		static: {
 			directory: path.resolve(__dirname, 'dist'),
 		},
+		devMiddleware: {
+			writeToDisk: true,
+		},
 	},
 	module: {
 		rules: [
@@ -30,6 +34,7 @@ module.exports = {
 		],
 	},
 	plugins: [
+		new CleanWebpackPlugin(),
 		new webpack.ProgressPlugin(),
 		new CopyPlugin({
 			patterns: [

@@ -1,0 +1,32 @@
+{
+    "name": "WebRequestTestSample",
+    "version": "1.0.0",
+    "description": "Chrome Extension WebRequest API Test",
+    "manifest_version": 3,
+    "background": {
+        "service_worker": "background.js",
+        "type": "module"
+    },
+    "content_scripts": [
+        {
+            "js": [
+                "content_script.js"
+            ],
+            "matches": [
+                "https://www.google.co.jp/*"
+            ]
+        }
+    ],
+    "permissions": [
+        "webRequest",
+        "tabs"
+    ],
+    "icons": {
+        "16": "./icons/16_fox.png",
+        "48": "./icons/48_fox.png",
+        "128": "./icons/128_fox.png"
+    },
+    "host_permissions": [
+        "https://www.google.co.jp/*"
+    ]
+}
